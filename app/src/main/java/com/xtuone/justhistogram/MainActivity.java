@@ -20,7 +20,8 @@ public class MainActivity extends AppCompatActivity {
         c.setTimeInMillis(System.currentTimeMillis());
         int day = c.get(Calendar.DAY_OF_MONTH);
         for (int i = 1; i <= 15; i++) {
-            Summery temp = new Summery().setTimeMillis(c.getTimeInMillis());
+            Summery temp = new Summery();
+            temp.setTimeInMillis(c.getTimeInMillis());
             c.set(Calendar.DAY_OF_MONTH, day - i);
 
             temp.setRec_sys_wifi(23+i);

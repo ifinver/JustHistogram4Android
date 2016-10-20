@@ -137,7 +137,7 @@ public class Summery {
     }
 
     // KEEP METHODS - put your custom methods here
-    public Summery setTimeMillis(long timeMillis){
+    public void setTimeInMillis(long timeMillis){
         Calendar c = Calendar.getInstance();
         c.setTimeInMillis(timeMillis);
         int year = c.get(Calendar.YEAR);
@@ -145,7 +145,6 @@ public class Summery {
         int day = c.get(Calendar.DAY_OF_MONTH);
 
         this.date = year *10000+month*100+day;
-        return this;
     }
 
     public boolean isSameDay(long timeMillis) {
